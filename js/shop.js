@@ -1,8 +1,10 @@
-const url = "https://customiseme-2ddb.restdb.io/rest/soaps?max=7";
+const url = "https://customiseme-2ddb.restdb.io/rest/soaps?max=20";
+// const url = "https://customiseme-2ddb.restdb.io/rest/soaps";
 
 const options = {
   headers: {
     "x-apikey": "66c44f47c52295086c9543f2",
+    "Access-Control-Allow-Origin": "https://sesejose.github.io",
   },
 };
 fetch(url, options)
