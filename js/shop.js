@@ -1,4 +1,4 @@
-const url = "https://customiseme-2ddb.restdb.io/rest/soaps?max=20";
+const url = "https://customiseme-2ddb.restdb.io/rest/soaps?max=7";
 // const url = "https://customiseme-2ddb.restdb.io/rest/soaps";
 
 const options = {
