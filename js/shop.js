@@ -3,7 +3,9 @@ const url = "https://customiseme-2ddb.restdb.io/rest/soaps?max=7";
 
 const options = {
   headers: {
+    "content-type": "application/json",
     "x-apikey": "66c44f47c52295086c9543f2",
+    "cache-control": "no-cache",
     // "Access-Control-Allow-Origin": "https://sesejose.github.io/",
   },
 };
@@ -26,7 +28,7 @@ function showSoap(soap) {
   const template = document.querySelector("#cartTemplate").content;
   const copy = template.cloneNode(true);
   copy.querySelector(".soap-name").textContent = soap.name;
-  copy.querySelector(".soap-image").textContent = soap.image;
+  // copy.querySelector(".soap-image").textContent = soap.image;
   copy.querySelector(".soap-price").textContent = soap.price + " " + "DDK";
   copy.querySelector(".soap-image").src = soap.imageurl;
   copy.querySelector("a").setAttribute("href", `product.html?id=${soap._id}`);
