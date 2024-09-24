@@ -24,6 +24,7 @@
   --p-large: 1.5rem 3rem;
   --ps: 0.5rem;
   --mtb: 1rem 0;
+  --mtb-medium: 3rem 0;
   --mtb-large: 2rem 0;
   --mlr: 0 1rem;
   --ml: 0 0 0 1rem;
@@ -269,7 +270,7 @@ a.mainmenu:active {
 .center-text {
   width: 100%;
   text-align: center;
-  padding: var(--p);
+  /* padding: var(--p); */
 }
 
 button {
@@ -301,6 +302,41 @@ button {
   cursor: pointer;
 }
 
+a.text-links {
+  width: fit-content;
+  /* background-color: var(--dark-green); */
+  border: none;
+  appearance: none;
+  color: var(--dark-green);
+  font-weight: bold;
+  font-size: small;
+  cursor: pointer;
+}
+
+.text-small {
+  font-size: var(--font-sm);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.dark-green {
+  color: var(--dark-green);
+}
+
+.ps {
+  padding: var(--ps);
+}
+
+.p {
+  padding: var(--p);
+}
+
+.ptb {
+  padding: var(--ptb);
+}
+
 .m-auto {
   margin: 0 auto;
 }
@@ -315,6 +351,10 @@ button {
 
 .mtb-large {
   margin: var(--mtb-large);
+}
+
+.mtb {
+  margin: var(--mtb);
 }
 
 .product button {
@@ -417,7 +457,7 @@ a.pro-home:hover {
   max-width: 100%;
 }
 
-/*****************  Mobile Section Create Soap Home  ******************/
+/********  Mobile Section Create Soap Home  ******************/
 
 .create-soap-home {
   display: flex;
@@ -473,7 +513,7 @@ a.pro-home:hover {
   text-align: center;
 }
 
-/*******************  Mobile Instagram Home  *****************/
+/********  Mobile Instagram Home  *********/
 
 .insta-social {
   display: flex;
@@ -498,11 +538,62 @@ a.pro-home:hover {
   margin: 0 auto;
 }
 
-/******************  Mobile Create Soap - Custom Form ***************************/
+/**********  Mobile Create Soap - Custom Form ***************************/
 
+fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  appearance: none;
+  border: none;
+  padding: 0;
+}
+
+label.calm,
+label.focus,
+label.cleaning,
+label.analgesic {
+  display: flex;
+  width: fit-content;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+  background: var(--dark-green);
+  border-radius: var(--border-radius);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--black);
+  font-size: var(--font-sm);
+  padding: 0;
+}
+
+label.calm input[type="radio"],
+label.focus input[type="radio"],
+label.cleaning input[type="radio"],
+label.analgesic input[type="radio"] {
+  width: 100%;
+  display: none;
+  /* opacity: 0.2; */
+}
+
+.exp-text,
+.exp-input {
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  font-size: small;
+  padding: var(--ps);
+}
+/* 
 #form-mobile {
   display: flex;
-}
+} */
 
 #select {
   border: none;
@@ -541,7 +632,7 @@ label {
   gap: 1rem;
 }
 
-.form-create-soap-mobile {
+.form-create-soap {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -563,7 +654,7 @@ label {
 
 .ingredients {
   padding: var(--plr);
-  margin: var(--mtb-large);
+  /* margin: var(--mtb-large); */
 }
 
 .exp-sel,
@@ -596,6 +687,10 @@ label {
   width: 100%;
 }
 
+.oils-selected {
+  gap: 1rem;
+}
+
 .list-items,
 .oils-selected {
   display: flex;
@@ -603,7 +698,7 @@ label {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 1rem;
+  /* gap: 1rem; */
   padding: 0;
 }
 
@@ -729,7 +824,8 @@ label {
   display: flex;
   flex-flow: column;
   margin: var(--mtb-large);
-  width: 100%;
+  padding: var(--p);
+  /* width: 100%; */
 }
 
 .container-cost {
@@ -783,16 +879,16 @@ label {
   /* margin: var(--mt); */
   /* width: 100%; */
 }
-
+/* 
 #form-mobile {
-  display: flex;
-}
-
-#form-desktop {
   display: none;
-}
+} */
 
-/************** Desktop Form Select Color, Shape, Note  ****************************/
+/* #form-desktop {
+  display: flex;
+} */
+
+/******* Desktop Form Select Color, Shape, Note  ****************************/
 
 /* Hide the browser's default checkbox */
 .label-color input,
@@ -847,7 +943,7 @@ label {
   z-index: 1;
 }
 
-/******************  Desktop Form Select Shape ************************************/
+/**********  Desktop Form Select Shape ************************************/
 
 /* Create a custom checkbox */
 .label-shape .circle,
@@ -873,8 +969,6 @@ label {
 .label-note input:checked ~ .note {
   box-shadow: inset 0px 0px 0px 2px var(--green);
 }
-
-/******************************************************/
 
 /***********  Mobile Product.html page **********************/
 
@@ -1154,11 +1248,6 @@ footer ul {
   margin: var(--mr);
 }
 
-/* footer > * {
-  display: flex;
-  flex-direction: column;
-} */
-
 .w100 {
   width: 100%;
   /* display: flex; */
@@ -1376,7 +1465,7 @@ footer ul {
     gap: 1rem;
   }
 
-  /********************  Mobile Notes & Fragances *******************************/
+  /**********  Mobile Notes & Fragances *******************************/
 
   .experiences {
     display: flex;
@@ -1391,7 +1480,7 @@ footer ul {
     margin: 0;
   }
 
-  /**********************  Desktop Calming page *****************************/
+  /***********  Desktop Calming page *****************************/
 
   .oils {
     width: 100%;
@@ -1428,20 +1517,30 @@ footer ul {
 
   /******************* Desktop Create Soap Html *********************/
 
-  #form-mobile {
-    display: none;
+  .cost {
+    width: 100%;
+    padding: 0;
   }
 
-  #form-desktop {
-    display: flex;
-  }
-
-  .form-create-soap-desktop {
+  .form-create-soap {
     display: flex;
     flex-flow: row;
     align-items: flex-start;
+    text-align: left;
     gap: 4rem;
     width: 100%;
+  }
+
+  fieldset {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  label.calm,
+  label.focus,
+  label.cleaning,
+  label.analgesic {
+    padding: 0.5rem 1.5rem;
   }
 
   .ingredients {
@@ -1477,7 +1576,7 @@ footer ul {
     border-radius: var(--border-radius);
   }
 
-  /************** Desktop Form Select Color, Shape, Note  ****************************/
+  /************** Desktop Form Select Color, Shape, Note  ************************/
 
   /* Hide the browser's default checkbox */
   .label-color input,
@@ -1532,7 +1631,7 @@ footer ul {
     z-index: 1;
   }
 
-  /******************  Desktop Form Select Shape ************************************/
+  /*************  Desktop Form Select Shape ****************/
 
   /* Create a custom checkbox */
   .label-shape .circle,
@@ -1548,7 +1647,7 @@ footer ul {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
   }
 
-  /**************  Form Select Note  ****************************/
+  /**************  Form Select Note  *******************/
 
   /* On mouse-over, add a inner shadow */
   .label-note:hover input ~ .note {
@@ -1641,7 +1740,7 @@ footer ul {
     flex-direction: row;
   }
 
-  /***************** Desktop Shop Page ***********************************/
+  /****** Desktop Shop Page **********/
 
   .buttons-type-products {
     display: flex;
