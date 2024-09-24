@@ -546,10 +546,15 @@ fieldset {
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
   appearance: none;
   border: none;
   padding: 0;
+}
+
+fieldset legend {
+  margin: 0 auto;
+  text-align: center;
 }
 
 label.calm,
@@ -1532,8 +1537,14 @@ footer ul {
   }
 
   fieldset {
+    text-align: center;
     justify-content: space-between;
     padding: 0;
+  }
+
+  fieldset legend {
+    margin: 0;
+    text-align: left;
   }
 
   label.calm,
