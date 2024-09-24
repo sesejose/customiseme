@@ -567,6 +567,7 @@ label.analgesic {
   cursor: pointer;
   position: relative;
   background: var(--dark-green);
+  border: 1px solid var(--green);
   border-radius: var(--border-radius);
   justify-content: center;
   align-items: center;
